@@ -6,8 +6,8 @@ const waveCanvas = document.getElementById('waveCanvas');
 const ctx = waveCanvas.getContext('2d');
 const changeNBtn = document.getElementById('change-n');
 const increaseSpeedBtn = document.getElementById('increase-speed');
+const decreaseSpeedBtn = document.getElementById('decrease-speed');
 const endSimulationBtn = document.getElementById('end-simulation');
-const nInput = document.getElementById('n');
 const nError = document.getElementById('n-error');
 
 // Parámetros de la onda
@@ -104,6 +104,15 @@ increaseSpeedBtn.addEventListener('click', () => {
         speed -= 5;
     } else {
         alert("La velocidad ya está al máximo.");
+    }
+});
+
+// Disminuir la velocidad de la animación
+decreaseSpeedBtn.addEventListener('click', () => {
+    if (speed < 100) { // Establece un límite máximo para la velocidad
+        speed += 5;
+    } else {
+        alert("La velocidad ya está al mínimo.");
     }
 });
 

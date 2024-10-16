@@ -20,22 +20,22 @@
         <form id="input-form">
             <div class="form-group">
                 <label for="amplitud">Amplitud (A) de la onda:</label>
-                <input type="number" id="amplitud" name="amplitud" step="0.1" value="1" required>
+                <input type="number" id="amplitud" name="amplitud" step="0.01" min="0.01" value="1" required>
             </div>
 
             <div class="form-group">
                 <label for="frecuencia">Frecuencia (Hz):</label>
-                <input type="number" id="frecuencia" name="frecuencia" step="0.1" value="1" required>
+                <input type="number" id="frecuencia" name="frecuencia" step="0.01" min="0.01" value="1" required>
             </div>
 
             <div class="form-group">
                 <label for="longitud_onda">Longitud de onda (λ) en metros:</label>
-                <input type="number" id="longitud_onda" name="longitud_onda" step="0.1" value="1" required>
+                <input type="number" id="longitud_onda" name="longitud_onda" step="0.01" min="0.01" value="1" required>
             </div>
 
             <div class="form-group">
                 <label for="longitud_cuerda">Longitud de la cuerda:</label>
-                <input type="number" id="longitud_cuerda" name="longitud_cuerda" step="0.1" value="1" required>
+                <input type="number" id="longitud_cuerda" name="longitud_cuerda" step="0.01" min="0.01" value="1" required>
             </div>
 
             <div class="form-group">
@@ -44,25 +44,24 @@
                 <small class="error-message" id="n-error">Por favor, introduce un número entero mayor que 0.</small>
             </div>
 
-            <button type="submit">Iniciar Simulación</button>
+            <button type="submit"><i class="fas fa-play"></i> Iniciar Simulación</button>
         </form>
     </div>
 
     <div id="simulation-screen" class="screen hidden">
         <h2>Onda Estacionaria en una Cuerda Vibrante</h2>
-        <canvas id="waveCanvas" width="800" height="400"></canvas>
+        <canvas id="waveCanvas" width="1000" height="500"></canvas>
         <div class="controls">
             <button id="change-n" title="Cambiar n"><i class="fas fa-edit"></i> Cambiar n</button>
             <button id="increase-speed" title="Aumentar Velocidad"><i class="fas fa-tachometer-alt"></i> Aumentar Velocidad</button>
+            <button id="decrease-speed" title="Disminuir Velocidad"><i class="fas fa-tachometer-alt"></i> Disminuir Velocidad</button>
             <button id="end-simulation" title="Terminar Simulación"><i class="fas fa-stop"></i> Terminar</button>
         </div>
     </div>
 
-    
     <div class="physics-icons">
         <img src="https://thumbs.dreamstime.com/b/ilustraci%C3%B3n-de-icono-vector-l%C3%ADnea-color-relacionada-con-f%C3%ADsica-el-trata-sobre-la-educaci%C3%B3n-escuela-ciencias-%C3%A1tomo-210000029.jpg" alt="Física 1">
         <img src="https://i.pinimg.com/736x/1d/37/8a/1d378a2cc72ec06bbea8b7d74e01c793.jpg" alt="Física 2">
-        
     </div>
 
     <script src="script.js"></script>

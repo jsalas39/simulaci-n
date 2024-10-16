@@ -18,7 +18,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://www.adelante.cu/images/2022/agosto/1/fisica/fisica-2.jpg');
+    background-image: url('https://www.adelante.cu/images/2022/agosto/1/fisica/fisica-2.jpg'); 
     background-size: cover;
     background-position: center;
     opacity: 0.1;
@@ -32,12 +32,12 @@ body {
 
 .screen {
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px 50px;
+    padding: 40px 60px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    width: 90%;
-    max-width: 600px;
-    margin: 50px auto;
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
     position: relative;
     animation: fadeIn 1s ease-in-out;
 }
@@ -59,7 +59,7 @@ form {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -118,16 +118,18 @@ button i {
 .controls {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .controls button {
-    width: 30%;
+    width: 22%;
     padding: 10px;
     font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px 0;
 }
 
 .controls button i {
@@ -163,6 +165,18 @@ button i {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .screen {
+        padding: 30px 40px;
+        max-width: 900px;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .screen {
         padding: 20px 30px;
@@ -173,7 +187,7 @@ button i {
     }
 
     .controls button {
-        width: 80px;
+        width: 45%;
         font-size: 12px;
     }
 
